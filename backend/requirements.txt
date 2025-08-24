@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pandas
+numpy
+plotly
+scipy
+python-multipart
+requests
+openpyxl
+motor
+python-dotenv
+matplotlib
+seaborn
+reportlab
+httpx
+tenacity

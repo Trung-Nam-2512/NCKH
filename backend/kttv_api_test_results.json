@@ -1,0 +1,19 @@
+{
+  "stations": {
+    "successful_methods": [
+      {
+        "method": "API Key Header (x-api-key)",
+        "headers": {
+          "x-api-key": "25ab243d80604b50a42afc1e270fcc51"
+        },
+        "params": {},
+        "response_sample": "[{'uuid': '1edda8b4-47a0-450f-bea6-89745b994e11', 'code': '634150', 'name': 'Đinh Trang Thượng - Di Linh', 'number': '84848038092', 'latitude': 11.726111, 'longitude': 107.970278, 'area': 'Đinh Trang ..."
+      }
+    ],
+    "working_config": null
+  },
+  "stats": {
+    "successful_methods": [],
+    "working_config": null
+  }
+}

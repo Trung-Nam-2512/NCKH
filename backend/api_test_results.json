@@ -1,0 +1,367 @@
+{
+  "nokttv": {
+    "stations": {
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json",
+        "content-length": "3989",
+        "connection": "keep-alive",
+        "date": "Sat, 23 Aug 2025 10:29:41 GMT",
+        "x-amz-cf-pop": "SIN2-P4, SGN50-P1",
+        "x-amzn-requestid": "c46fb12e-a9ac-4b0a-90c7-673d5da86502",
+        "x-amzn-remapped-connection": "keep-alive",
+        "x-amzn-remapped-date": "Sat, 23 Aug 2025 10:29:41 GMT",
+        "via": "1.1 a9fb1933765b2e0a17ee7cee382c4058.cloudfront.net (CloudFront), 1.1 27edb89c2cf32c1ff633bbd43e972ac6.cloudfront.net (CloudFront)",
+        "x-amz-apigw-id": "PwSzeFOZSQ0EDGQ=",
+        "vary": "Origin",
+        "x-amzn-remapped-server": "nginx",
+        "x-cache": "Miss from cloudfront",
+        "x-amz-cf-id": "velvWQKxGeLB5WSUiBV8tCfUNavOdtAwPt3x_AftwApKaPTMhSQ1cA=="
+      },
+      "url": "https://openapi.vrain.vn/v1/stations",
+      "data": [
+        {
+          "uuid": "afb10f72-2759-11ec-8ef9-06552145a11a",
+          "code": "644975",
+          "name": "Đăk Ha, Đăk G'Long",
+          "number": "84397644975",
+          "latitude": 12.081944,
+          "longitude": 107.785556,
+          "area": "Bắc Gia Nghĩa",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Đăk Ha",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afb22d8a-2759-11ec-8ef9-06552145a11a",
+          "code": "001836",
+          "name": "Nhân Cơ, Đăk R'lấp",
+          "number": "84842790821",
+          "latitude": 11.980692,
+          "longitude": 107.588431,
+          "area": "Nhân Cơ",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Nhân Cơ",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afadfaf0-2759-11ec-8ef9-06552145a11a",
+          "code": "091960",
+          "name": "Khu bảo tồn Nâm Nung, Nâm N’Jang",
+          "number": "84325091960",
+          "latitude": 12.200556,
+          "longitude": 107.635556,
+          "area": "Trường Xuân",
+          "city": "Lâm Đồng",
+          "address": "Khu bảo tồn Nâm Nung",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afadfff6-2759-11ec-8ef9-06552145a11a",
+          "code": "074781",
+          "name": "Đăk N'Drung, Đắk Song",
+          "number": "84325074781",
+          "latitude": 12.213611,
+          "longitude": 107.568889,
+          "area": "Đức An",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Đăk N'Drung",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afb5baef-2759-11ec-8ef9-06552145a11a",
+          "code": "480009",
+          "name": "Đăk Wer, Đăk R'lấp",
+          "number": "84369781652",
+          "latitude": 12.012499,
+          "longitude": 107.566392,
+          "area": "Nhân Cơ",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Đăk Wer",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afa7858b-2759-11ec-8ef9-06552145a11a",
+          "code": "001753",
+          "name": "Đăk Buk So, Tuy Đức",
+          "number": "84325001753",
+          "latitude": 12.211052,
+          "longitude": 107.465974,
+          "area": "Tuy Đức",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Đăk Buk So",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afb1085e-2759-11ec-8ef9-06552145a11a",
+          "code": "646676",
+          "name": "Quảng Thành, Gia Nghĩa",
+          "number": "84397646676",
+          "latitude": 12.040833,
+          "longitude": 107.686389,
+          "area": "Bắc Gia Nghĩa",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Quảng Thành",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afa80813-2759-11ec-8ef9-06552145a11a",
+          "code": "014702",
+          "name": "Nghĩa Trung, Gia Nghĩa",
+          "number": "84842880372",
+          "latitude": 11.989484,
+          "longitude": 107.703889,
+          "area": "Đông Gia Nghĩa",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Nghĩa Trung",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afb5085e-2759-11ec-8ef9-06552145a11a",
+          "code": "480002",
+          "name": "Đắk Som, Đăk G'Long",
+          "number": "84369781291",
+          "latitude": 11.874722,
+          "longitude": 107.925833,
+          "area": "Tà Đùng",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Đắk Som",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afa78cf5-2759-11ec-8ef9-06552145a11a",
+          "code": "001905",
+          "name": "Nâm N’Jang, Đắk Song",
+          "number": "84325001905",
+          "latitude": 12.188738,
+          "longitude": 107.586953,
+          "area": "Trường Xuân",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Nâm N'Jang",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afb5c36a-2759-11ec-8ef9-06552145a11a",
+          "code": "480010",
+          "name": "Quảng Tâm, Tuy Đức",
+          "number": "84396768355",
+          "latitude": 12.173437,
+          "longitude": 107.453549,
+          "area": "Tuy Đức",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Quảng Tâm",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afa8312a-2759-11ec-8ef9-06552145a11a",
+          "code": "014513",
+          "name": "Kiến Thành, Đăk R'lấp",
+          "number": "84325014513",
+          "latitude": 12.00892,
+          "longitude": 107.529448,
+          "area": "Kiến Đức",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Kiến Thành",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afb10b0d-2759-11ec-8ef9-06552145a11a",
+          "code": "645801",
+          "name": "Đăk R'Moan, Gia Nghĩa",
+          "number": "84397645801",
+          "latitude": 12.004444,
+          "longitude": 107.643611,
+          "area": "Nam Gia Nghĩa",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Đăk R'Moan",
+          "altitude": null,
+          "waterStationType": null
+        },
+        {
+          "uuid": "afb112e3-2759-11ec-8ef9-06552145a11a",
+          "code": "643529",
+          "name": "Thuận Hà, Đắk Song",
+          "number": "84397643529",
+          "latitude": 12.243333,
+          "longitude": 107.533333,
+          "area": "Thuận Hạnh",
+          "city": "Lâm Đồng",
+          "address": "UBND xã Thuận Hà",
+          "altitude": null,
+          "waterStationType": null
+        }
+      ],
+      "error": null
+    },
+    "stats": {
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json",
+        "content-length": "1261",
+        "connection": "keep-alive",
+        "date": "Sat, 23 Aug 2025 10:29:42 GMT",
+        "x-amz-cf-pop": "SIN2-P4, SGN50-P1",
+        "x-amzn-requestid": "ff046213-38a2-4f46-b96d-42c06988d0d3",
+        "x-amzn-remapped-connection": "keep-alive",
+        "x-amzn-remapped-date": "Sat, 23 Aug 2025 10:29:42 GMT",
+        "via": "1.1 8f23eaccc3b115094ce6ce3910c583e0.cloudfront.net (CloudFront), 1.1 f1325acf6952e1a08aa9e956a2acb9b2.cloudfront.net (CloudFront)",
+        "x-amz-apigw-id": "PwSzgENjyQ0EUSg=",
+        "vary": "Origin",
+        "x-amzn-remapped-server": "nginx",
+        "x-cache": "Miss from cloudfront",
+        "x-amz-cf-id": "lvj_xQHAmeeABZc2pHiOSrgwmbLATayzFMDoZSZgNEZZ9qPCL0e64w=="
+      },
+      "url": "https://openapi.vrain.vn/v1/stations/stats",
+      "data": {
+        "afb5baef-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afa7858b-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afb5c36a-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afb10b0d-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afb5085e-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afa8312a-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afb1085e-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afa80813-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afadfaf0-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afb112e3-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afb10f72-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afa78cf5-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afb22d8a-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.0,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ],
+        "afadfff6-2759-11ec-8ef9-06552145a11a": [
+          {
+            "depth": 0.4,
+            "time_point": "2025-08-23 17:00:00"
+          }
+        ]
+      },
+      "error": null
+    },
+    "auth_method": "x-api-key header",
+    "mapping_analysis": {
+      "stations_count": 14,
+      "stats_count": 0,
+      "mappable_count": 0,
+      "unmappable_stats": [],
+      "station_keys": "set()",
+      "stats_keys": "set()",
+      "mapping_analysis": {}
+    }
+  },
+  "kttv": {
+    "stations": {
+      "status_code": 403,
+      "headers": {
+        "content-type": "application/json",
+        "content-length": "23",
+        "connection": "keep-alive",
+        "date": "Sat, 23 Aug 2025 10:29:42 GMT",
+        "x-amz-apigw-id": "PwSziFRbyQ0EE9Q=",
+        "x-amzn-requestid": "13a857d4-bbfa-43af-a642-28967be50225",
+        "x-amzn-errortype": "ForbiddenException",
+        "x-cache": "Error from cloudfront",
+        "via": "1.1 ca84731125cd3dd43582c552f31363f2.cloudfront.net (CloudFront)",
+        "x-amz-cf-pop": "SGN50-P1",
+        "x-amz-cf-id": "b8LQspA2zvejn3F64P3JXMUCdE5if2xlZkoIv07zuB8va3cOJ-qo6A=="
+      },
+      "url": "https://kttv-open.vrain.vn/v1/stations",
+      "data": null,
+      "error": "{\"message\":\"Forbidden\"}"
+    },
+    "stats": {
+      "status_code": 403,
+      "headers": {
+        "content-type": "application/json",
+        "content-length": "23",
+        "connection": "keep-alive",
+        "date": "Sat, 23 Aug 2025 10:29:42 GMT",
+        "x-amz-apigw-id": "PwSzjGT5SQ0ETjQ=",
+        "x-amzn-requestid": "8607a9b1-f376-465c-b4ec-3a23dabcc862",
+        "x-amzn-errortype": "ForbiddenException",
+        "x-cache": "Error from cloudfront",
+        "via": "1.1 2b3bfddd7fadfc8b0dc8b70deb21eed2.cloudfront.net (CloudFront)",
+        "x-amz-cf-pop": "SGN50-P1",
+        "x-amz-cf-id": "bGiCT_nqjMg2TqWcSs0uOWcwNCSomsWCrinSX8bk-lrEl9msTggi8w=="
+      },
+      "url": "https://kttv-open.vrain.vn/v1/stations/stats",
+      "data": null,
+      "error": "{\"message\":\"Forbidden\"}"
+    },
+    "auth_method": null
+  }
+}

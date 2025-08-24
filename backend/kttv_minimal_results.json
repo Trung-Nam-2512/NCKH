@@ -1,0 +1,130 @@
+{
+  "kttv_working": true,
+  "stations_count": 34,
+  "working_config": {
+    "time_range": "1 hour",
+    "params": {
+      "start_time": "2025-08-23 19:41:44",
+      "end_time": "2025-08-23 20:41:44"
+    },
+    "stations_count": 2,
+    "sample_data": {
+      "id": "a",
+      "Data": [
+        {
+          "value": [
+            {
+              "depth": 0.0,
+              "time_point": "2025-08-23 19:10:00"
+            },
+            {
+              "depth": 0.0,
+              "time_point": "2025-08-23 19:20:00"
+            },
+            {
+              "depth": 0.0,
+              "time_point": "2025-08-23 19:30:00"
+            },
+            {
+              "depth": 0.0,
+              "time_point": "2025-08-23 19:40:00"
+            },
+            {
+              "depth": 0.0,
+              "time_point": "2025-08-23 19:50:00"
+            },
+            {
+              "depth": 0.0,
+              "time_point": "2025-08-23 20:00:00"
+            },
+            {
+              "depth": 0.0,
+              "time_point": "2025-08-23 20:10:00"
+            },
+            {
+              "depth": 0.0,
+              "time_point": "2025-08-23 20:20:00"
+            },
+            {
+              "depth": 0.0,
+              "time_point": "2025-08-23 20:30:00"
+            },
+            {
+              "depth": 0.0,
+              "time_point": "2025-08-23 20:40:00"
+            }
+          ],
+          "station_id": "642574"
+        }
+      ]
+    }
+  },
+  "all_stations": [
+    {
+      "uuid": "1edda8b4-47a0-450f-bea6-89745b994e11",
+      "code": "634150",
+      "name": "Đinh Trang Thượng - Di Linh",
+      "number": "84848038092",
+      "latitude": 11.726111,
+      "longitude": 107.970278,
+      "area": "Đinh Trang Thượng",
+      "city": "Lâm Đồng",
+      "address": "UBND xã Đinh Trang Thượng",
+      "altitude": null,
+      "waterStationType": null
+    },
+    {
+      "uuid": "277341af-39ac-4ffb-9c0d-68d78004a35f",
+      "code": "642574",
+      "name": "Phúc Thọ - Lâm Hà",
+      "number": "84849199083",
+      "latitude": 11.791944,
+      "longitude": 108.168056,
+      "area": "Phúc Thọ Lâm Hà",
+      "city": "Lâm Đồng",
+      "address": "UBND xã Phúc Thọ",
+      "altitude": null,
+      "waterStationType": null
+    },
+    {
+      "uuid": "06a75c3b-15d7-4820-8a79-74972933ea33",
+      "code": "791958",
+      "name": "P'Róh - Đơn Dương",
+      "number": "84845511597",
+      "latitude": 11.725833,
+      "longitude": 108.536667,
+      "area": "Quảng Lập",
+      "city": "Lâm Đồng",
+      "address": "UBND xã P'Róh",
+      "altitude": null,
+      "waterStationType": null
+    },
+    {
+      "uuid": "c6b95185-39dd-4a90-b979-9b027d5b07b5",
+      "code": "490035",
+      "name": "Đạ Đờn - Lâm Hà",
+      "number": "84847359353",
+      "latitude": 11.809241,
+      "longitude": 108.22375,
+      "area": "Phú Sơn Lâm Hà",
+      "city": "Lâm Đồng",
+      "address": "UBND xã Đạ Đờn",
+      "altitude": null,
+      "waterStationType": null
+    },
+    {
+      "uuid": "210af1c0-f063-42d9-9f16-cbd1a5abd23b",
+      "code": "633427",
+      "name": "Tân Nghĩa - Di Linh",
+      "number": "84842970212",
+      "latitude": 11.637778,
+      "longitude": 108.097222,
+      "area": "Bảo Thuận",
+      "city": "Lâm Đồng",
+      "address": "Nhà văn hóa xã Tân Nghĩa",
+      "altitude": null,
+      "waterStationType": null
+    }
+  ],
+  "timestamp": "2025-08-23T20:41:44.581736"
+}

@@ -1,0 +1,324 @@
+{
+  "generated_at": "2025-08-03T17:13:13.400640",
+  "total_records": 34,
+  "stations_count": 34,
+  "years_count": 1,
+  "date_range": {
+    "start": 2025,
+    "end": 2025
+  },
+  "depth_statistics": {
+    "min": 0.0,
+    "max": 2.4,
+    "mean": 0.2764705882352942,
+    "std": 0.5614153237803553
+  },
+  "station_analysis": {
+    "056882": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.2,
+        "max": 0.2,
+        "mean": 0.2
+      }
+    },
+    "1026766701": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.4,
+        "max": 0.4,
+        "mean": 0.4
+      }
+    },
+    "1026867501": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "1026867502": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "1026867503": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "164249": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.2,
+        "max": 0.2,
+        "mean": 0.2
+      }
+    },
+    "393281": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "490006": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "490027": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "490028": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.8,
+        "max": 0.8,
+        "mean": 0.8
+      }
+    },
+    "490029": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.2,
+        "max": 0.2,
+        "mean": 0.2
+      }
+    },
+    "490030": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "490031": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "490032": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "490033": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.2,
+        "max": 0.2,
+        "mean": 0.2
+      }
+    },
+    "490035": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "490036": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.4,
+        "max": 0.4,
+        "mean": 0.4
+      }
+    },
+    "490037": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "490057": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "521170": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "627820": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 1.6,
+        "max": 1.6,
+        "mean": 1.6
+      }
+    },
+    "633427": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.2,
+        "max": 0.2,
+        "mean": 0.2
+      }
+    },
+    "634150": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 1.8,
+        "max": 1.8,
+        "mean": 1.8
+      }
+    },
+    "637502": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.4,
+        "max": 0.4,
+        "mean": 0.4
+      }
+    },
+    "638578": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 2.4,
+        "max": 2.4,
+        "mean": 2.4
+      }
+    },
+    "642574": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.2,
+        "max": 0.2,
+        "mean": 0.2
+      }
+    },
+    "704132": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "745380": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "791958": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "899450": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.2,
+        "max": 0.2,
+        "mean": 0.2
+      }
+    },
+    "927364": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.2,
+        "max": 0.2,
+        "mean": 0.2
+      }
+    },
+    "936030": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "940153": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "951080": {
+      "records_count": 1,
+      "years_count": 1,
+      "depth_range": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    }
+  }
+}

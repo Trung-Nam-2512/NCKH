@@ -1,0 +1,7 @@
+# Additional requirements for scheduler functionality
+apscheduler==3.10.4  # Advanced Python Scheduler for background tasks
+motor==3.3.2         # Async MongoDB driver (if not already in main requirements)
+httpx==0.25.2        # Modern HTTP client for API calls (if not already in main requirements)
+pymongo==4.6.0       # MongoDB driver for sync operations (if not already in main requirements)
+pydantic==2.5.0      # Data validation (if not already in main requirements)
+fastapi==0.104.1     # FastAPI framework (if not already in main requirements)

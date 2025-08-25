@@ -1,3 +1,19 @@
+"""
+DỊCH VỤ XỬ LÝ DỮ LIỆU (DATA SERVICE) - Core service quản lý và xử lý dữ liệu thủy văn
+
+Chức năng chính:
+- Upload và validate dữ liệu từ file CSV/Excel
+- Chuyển đổi và chuẩn hóa format dữ liệu
+- Phát hiện và xử lý dữ liệu thiếu, ngoại lai
+- Cung cấp interface thống nhất cho data access
+- Cache dữ liệu trong memory để tăng hiệu năng
+
+Hỗ trợ các định dạng dữ liệu:
+- Time series hàng năm: [Year, Value] 
+- Time series hàng tháng: [Year, Month, Value]
+- Dữ liệu manual input từ frontend
+"""
+
 import pandas as pd
 import numpy as np
 from io import BytesIO
@@ -8,44 +24,95 @@ from typing import Dict, Any, Union
 from ..models.data_models import UploadManualPayload
 
 class DataService:
+    """
+    DỊCH VỤ XỬ LÝ DỮ LIỆU TRUNG TÂM
+    
+    Đây là core service chứa logic xử lý dữ liệu chính của hệ thống.
+    Thiết kế theo Singleton pattern để maintain state và cache data.
+    
+    Attributes:
+        data: DataFrame chứa dữ liệu hiện tại đang được xử lý
+        main_column: Tên của cột chứa dữ liệu chính (value column)
+    """
+    
     def __init__(self):
-        self.data: Union[pd.DataFrame, None] = None
-        self.main_column: Union[str, None] = None
+        """
+        Khởi tạo DataService với state rỗng
+        
+        State sẽ được populate khi user upload dữ liệu hoặc
+        service load data từ external sources
+        """
+        self.data: Union[pd.DataFrame, None] = None  # DataFrame chính chứa dữ liệu
+        self.main_column: Union[str, None] = None    # Tên cột dữ liệu chính
 
     def convert_month(self, month_value: Any) -> Union[int, None]:
         """
-        Chuyển đổi month_value thành int, trả None nếu invalid.
-        - Extract digits từ string (e.g., "Month 1" → 1).
-        - Nếu không có số (e.g., "Jan") → None → sẽ NaN, sau dropna.
+        Chuyển đổi giá trị tháng từ nhiều định dạng khác nhau thành integer
+        
+        Xử lý các trường hợp:
+        - String có chứa số: "Month 1", "Tháng 12" → extract số
+        - String text: "Jan", "January" → trả None (sẽ handle riêng)
+        - Số nguyên: 1, 2, 12 → convert trực tiếp
+        - Invalid values → None để sau này dropna()
+        
+        Args:
+            month_value: Giá trị tháng ở bất kỳ format nào
+            
+        Returns:
+            int hoặc None: Số tháng (1-12) hoặc None nếu không parse được
         """
         try:
             if isinstance(month_value, str):
+                # Tìm tất cả chữ số trong string
                 digits = re.findall(r'\d+', month_value)
                 if digits:
+                    # Lấy số đầu tiên tìm được
                     return int(digits[0])
                 else:
+                    # Không có số nào → có thể là "Jan", "Feb" → cần xử lý riêng
                     return None
             else:
+                # Giá trị không phải string → convert trực tiếp
                 return int(month_value)
         except Exception:
+            # Bất kỳ lỗi nào → trả None để handle gracefully
             return None
 
     def detect_main_data_column(self, df: pd.DataFrame) -> str:
         """
-        Phát hiện main_column số chính (không phải Year/Month).
-        - Raise nếu không tìm thấy numeric col hoặc format sai (2/3 cols).
-        - Lý do: Đảm bảo DF phù hợp cho phân tích thủy văn (yearly/monthly series).
+        Tự động phát hiện cột chứa dữ liệu chính (không phải Year/Month)
+        
+        Logic phát hiện:
+        - Tìm các cột numeric trong DataFrame
+        - Với 3 cột: phải có Year + Month + 1 cột data
+        - Với 2 cột: phải có Year + 1 cột data  
+        - Đảm bảo có ít nhất 1 cột số để phân tích
+        
+        Args:
+            df: DataFrame cần phân tích
+            
+        Returns:
+            str: Tên của cột chứa dữ liệu chính
+            
+        Raises:
+            ValueError: Khi không tìm thấy cột số hoặc format không hợp lệ
         """
+        # Tìm tất cả cột có kiểu dữ liệu số
         numeric_columns = df.select_dtypes(include=np.number).columns
+        
         if len(numeric_columns) == 0:
-            raise ValueError("Không tìm thấy cột số trong dữ liệu.")
+            raise ValueError("Không tìm thấy cột số trong dữ liệu. Cần ít nhất 1 cột số để phân tích.")
+        
+        # Xử lý theo số cột trong DataFrame
         if len(df.columns) == 3:
+            # Format: [Year, Month, Value] - time series hàng tháng
             if "Year" in df.columns and "Month" in df.columns:
                 for col in df.columns:
                     if col not in ["Year", "Month"]:
                         return col
             else:
-                raise ValueError("Phải có cột Year, Month khi dữ liệu có 3 cột.")
+                raise ValueError("Dữ liệu 3 cột phải có định dạng: Year, Month, [Tên cột dữ liệu]")
+                
         elif len(df.columns) == 2:
             if "Year" in df.columns:
                 for col in df.columns:

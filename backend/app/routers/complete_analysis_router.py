@@ -1,6 +1,31 @@
 """
-Complete Analysis Router - Tích hợp workflow hoàn chỉnh như user đã làm
-Sử dụng existing services để tạo complete analysis workflow
+COMPLETE ANALYSIS ROUTER - Workflow phân tích tần suất hoàn chỉnh tự động
+
+Module này tích hợp toàn bộ quy trình phân tích tần suất thủy văn
+từ A-Z như một chuyên gia thủy văn sẽ thực hiện:
+
+WORKFLOW HOÀN CHỈNH:
+1. Phân tích tất cả phân phối probability (Gumbel, Log-Normal, Gamma, etc.)
+2. Đánh giá goodness-of-fit và tìm phân phối tốt nhất (AIC, chi-square, p-value)
+3. Tạo frequency curves cho multiple distributions
+4. Vẽ QQ/PP plots để validate model performance
+5. Tính toán frequency tables với return periods
+6. Tạo comprehensive reports cho engineering applications
+
+USE CASES:
+- One-click frequency analysis cho professional hydrology
+- Complete statistical assessment cho flood/drought studies  
+- Engineering design value determination
+- Research-grade hydrological analysis
+- Export-ready results cho reports và publications
+
+OUTPUTS:
+- Distribution ranking và model selection
+- Interactive frequency curves
+- Goodness-of-fit visualizations
+- Return period calculations (2, 5, 10, 25, 50, 100 years)
+- Professional analysis reports
+- Export-ready data tables
 """
 from fastapi import APIRouter, Depends, Query, HTTPException
 from typing import Optional, List, Dict, Any
@@ -12,6 +37,8 @@ from ..dependencies import get_data_service, get_analysis_service
 from ..services.data_service import DataService
 from ..services.analysis_service import AnalysisService
 
+# Router với prefix "/complete" cho complete analysis workflows
+# Tags="complete_analysis" để phân biệt với individual analysis endpoints
 router = APIRouter(prefix="/complete", tags=["complete_analysis"])
 
 @router.post("/full-frequency-analysis")

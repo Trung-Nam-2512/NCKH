@@ -85,7 +85,7 @@ const Footer = () => {
                         {/* Bản quyền và phiên bản */}
                         <p className="footer-copyright">
                             <FontAwesomeIcon icon={faCopyright} className="me-2" />
-                            {new Date().getFullYear()} NGUYEN TRUNG NAM
+                            {new Date().getFullYear()}TSTV
                         </p>
                         <p className="footer-intro">
                             Phần mềm phân tích tần suất thủy văn giúp người dùng tính toán và phân tích dữ liệu thủy văn một cách nhanh chóng.

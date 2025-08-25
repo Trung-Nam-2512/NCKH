@@ -1,9 +1,24 @@
 #!/usr/bin/env python3
 """
-Enhanced Realtime Router with Visualization and QC Features
-- Time-series visualization
-- Quality control monitoring
-- Multi-station aggregation
+REALTIME ROUTER - API endpoints cho dữ liệu thủy văn thời gian thực
+
+Module này cung cấp comprehensive REST API để:
+- Lấy và xử lý dữ liệu thời gian thực từ các trạm đo
+- Visualization tương tác với Plotly (line, scatter, heatmap plots)
+- Quality Control (QC) monitoring và data validation
+- Multi-station analysis và comparison
+- Storage management cho long-term data retention
+- Frequency analysis data requirements management
+
+Tính năng nâng cao:
+- Time-series visualization với interactive charts
+- Quality control monitoring và anomaly detection
+- Multi-station aggregation và spatial analysis
+- Storage statistics và cleanup management
+- Backup functionality cho historical data preservation
+
+Đây là module critical cho real-time monitoring systems và
+cung cấp foundation data cho frequency analysis research.
 """
 from fastapi import APIRouter, HTTPException, Query, Depends
 from fastapi.responses import JSONResponse
@@ -21,19 +36,40 @@ from app.services.realtime_service import EnhancedRealtimeService
 from app.services.real_api_service import RealAPIService
 from app.models.data_models import RealTimeQuery, RealTimeResponse
 
+# Tạo router với prefix "/realtime" cho tất cả real-time endpoints
+# Tags="realtime" để group trong FastAPI documentation
 router = APIRouter(prefix="/realtime", tags=["realtime"])
 
-# Initialize enhanced service
+# Khởi tạo enhanced service để xử lý real-time data operations
+# Service này handle data fetching, processing, storage và QC
 realtime_service = EnhancedRealtimeService()
 
 @router.on_event("startup")
 async def startup_event():
-    """Initialize the enhanced realtime service on startup"""
+    """
+    KHỞI TẠO SERVICE KHI STARTUP
+    
+    Event handler được gọi khi FastAPI app khởi động.
+    Thực hiện initialization cho realtime service:
+    - Thiết lập database connections
+    - Initialize background tasks
+    - Setup monitoring và health checks
+    - Prepare caching mechanisms
+    """
     await realtime_service.start()
 
 @router.on_event("shutdown")
 async def shutdown_event():
-    """Stop the service on shutdown"""
+    """
+    DỌN DẸP KHI SHUTDOWN
+    
+    Event handler được gọi khi FastAPI app shutdown.
+    Thực hiện cleanup operations:
+    - Đóng database connections gracefully
+    - Stop background tasks
+    - Flush pending data to storage
+    - Release system resources
+    """
     await realtime_service.stop()
 
 @router.get("/water-level")

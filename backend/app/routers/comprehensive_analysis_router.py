@@ -1,5 +1,32 @@
 """
-Comprehensive Analysis Router - Endpoints cho phân tích tần suất toàn diện
+COMPREHENSIVE ANALYSIS ROUTER - Complete workflow phân tích tần suất chuyên nghiệp
+
+Module này cung cấp end-to-end analysis workflow tương tự như các 
+chuyên gia thủy văn thực hiện trong nghiên cứu và thiết kế:
+
+COMPREHENSIVE WORKFLOW:
+- File upload với validation và auto-detection
+- Multi-distribution analysis (Gumbel, Log-Normal, Gamma, etc.)  
+- Best-fit selection với statistical criteria
+- Professional visualization (frequency curves, QQ/PP plots)
+- Return period calculations cho engineering design
+- Export functionality với multiple formats
+- Research-grade reporting và documentation
+
+PROFESSIONAL FEATURES:
+- Automated goodness-of-fit testing
+- Uncertainty quantification
+- Multiple visualization options
+- Export-ready tables và charts
+- Statistical validation metrics
+- Engineering design recommendations
+
+USE CASES:
+- Hydrological engineering design (bridges, dams, drainage)
+- Research publications và technical reports
+- Professional consulting projects
+- Academic research và education
+- Regulatory compliance studies
 """
 from fastapi import APIRouter, Depends, Query, HTTPException, UploadFile, File, Form
 from fastapi.responses import StreamingResponse
@@ -14,16 +41,21 @@ from ..services.visualization_service import VisualizationService
 from ..services.analysis_service import AnalysisService
 from ..services.export_service import ExportService
 
+# Router với prefix "/comprehensive" cho complete analysis workflows
+# Tags="comprehensive_analysis" để phân biệt với simple analysis endpoints
 router = APIRouter(prefix="/comprehensive", tags=["comprehensive_analysis"])
 
 def get_comprehensive_service(data_service: DataService = Depends(get_data_service)) -> ComprehensiveAnalysisService:
+    """Dependency provider cho ComprehensiveAnalysisService"""
     return ComprehensiveAnalysisService(data_service)
 
 def get_visualization_service(data_service: DataService = Depends(get_data_service)) -> VisualizationService:
+    """Dependency provider cho VisualizationService với AnalysisService"""
     analysis_service = AnalysisService(data_service)
     return VisualizationService(data_service, analysis_service)
 
 def get_export_service() -> ExportService:
+    """Dependency provider cho ExportService"""
     return ExportService()
 
 @router.post("/analyze")

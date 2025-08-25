@@ -1,3 +1,29 @@
+"""
+INTEGRATION ROUTER - Tích hợp dữ liệu real-time với phân tích tần suất
+
+Module này kết nối dữ liệu real-time monitoring với các phân tích
+thống kê chuyên nghiệp, tạo thành complete system cho:
+- Real-time data processing và frequency analysis
+- Historical data analysis từ accumulated real-time streams
+- Continuous monitoring với automated analysis
+- Professional system assessment và recommendations
+
+WORKFLOW TÍCH HỢP:
+1. Fetch real-time data từ multiple sources (APIs, sensors)
+2. Process và quality control data streams  
+3. Accumulate historical data trong MongoDB
+4. Trigger frequency analysis khi đủ data requirements
+5. Continuous monitoring với scheduled analysis
+6. Professional reporting và assessment
+
+USE CASES:
+- Real-time flood/drought monitoring với statistical analysis
+- Continuous data collection cho long-term studies
+- Automated frequency analysis cho operational systems
+- Integration của real-time systems với research workflows
+- Professional hydrological monitoring solutions
+"""
+
 from fastapi import APIRouter, Depends, HTTPException, Query
 from typing import Optional, Dict, Any
 from ..services.integration_service import IntegrationService
@@ -6,6 +32,8 @@ from ..models.data_models import RealTimeQuery
 from ..dependencies import get_integration_service
 import logging
 
+# Router với prefix "/integration" cho real-time integration endpoints
+# Tags="integration" để nhóm các tính năng tích hợp complex
 router = APIRouter(prefix="/integration", tags=["integration"])
 
 @router.post("/fetch-and-analyze")
@@ -17,7 +45,35 @@ async def fetch_and_analyze_realtime(
     integration_service: IntegrationService = Depends(get_integration_service)
 ):
     """
-    Fetch dữ liệu realtime và thực hiện phân tích tần suất ngay lập tức
+    ENDPOINT FETCH VÀ PHÂN TÍCH REAL-TIME DATA
+    
+    Endpoint này thực hiện complete workflow:
+    1. Fetch fresh data từ real-time APIs dựa trên query parameters
+    2. Process data với quality control checks
+    3. Load data vào memory cho statistical analysis
+    4. Thực hiện frequency analysis với distribution được chỉ định
+    5. Return comprehensive results với visualizations
+    
+    Đây là "one-shot analysis" - lấy data và phân tích ngay lập tức
+    thay vì sử dụng historical data đã được cache.
+    
+    Args:
+        query: RealTimeQuery object với time range và station filters
+        distribution_name: Loại phân phối probability để fit
+        agg_func: Hàm aggregate dữ liệu (max cho flood analysis)
+        use_professional: Enable advanced professional analysis features
+        integration_service: Service handle integration logic
+        
+    Returns:
+        Dict: Complete analysis results với:
+            - Distribution fitting parameters
+            - Frequency curves và return periods
+            - QQ/PP plots for goodness-of-fit
+            - Professional assessment metrics
+            
+    Use Case:
+        Real-time analysis cho immediate decision making
+        Emergency response với latest available data
     """
     try:
         result = await integration_service.fetch_and_analyze_realtime(

@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-Professional Hydrological Frequency Analysis Service
-Meeting international standards for flood frequency analysis
+DỊCH VỤ PHÂN TÍCH TẦN SUẤT THỦY VĂN CHUYÊN NGHIỆP
+Đáp ứng các tiêu chuẩn quốc tế cho phân tích tần suất lũ
 
-Standards compliance:
-- WMO Guidelines for flood frequency analysis
-- ISO 14688 for hydrological data quality
-- ASCE Hydrology standards
-- Statistical reliability requirements
+Tuân thủ các tiêu chuẩn:
+- Hướng dẫn WMO cho phân tích tần suất lũ
+- ISO 14688 cho chất lượng dữ liệu thủy văn  
+- Tiêu chuẩn ASCE Hydrology
+- Yêu cầu về độ tin cậy thống kê
 
-Author: Hydrological Engineering System
-Version: 1.0 Professional
+Tác giả: Hệ thống Kỹ thuật Thủy văn
+Phiên bản: 1.0 Chuyên nghiệp
 """
 
 import numpy as np
@@ -22,32 +22,47 @@ import warnings
 from datetime import datetime
 import logging
 
+# Khởi tạo logger để ghi log hoạt động của service
 logger = logging.getLogger(__name__)
 
 class ProfessionalFrequencyAnalysisService:
     """
-    Professional-grade hydrological frequency analysis service
-    Implements rigorous statistical methods and quality controls
+    DỊCH VỤ PHÂN TÍCH TẦN SUẤT THỦY VĂN CHUYÊN NGHIỆP
+    
+    Tính năng chính:
+    - Phân tích tần suất lũ theo các phân phối thống kê chuẩn
+    - Kiểm soát chất lượng dữ liệu nghiêm ngặt
+    - Tính toán chu kỳ tái diễn và mức tin cậy
+    - Đánh giá độ phù hợp của phân phối lý thuyết
+    - Xuất báo cáo kỹ thuật chi tiết
     """
     
     def __init__(self, data_service=None):
+        """
+        Khởi tạo service với cấu hình chuyên nghiệp
+        
+        Args:
+            data_service: Service xử lý dữ liệu (tùy chọn)
+        """
         self.data_service = data_service
+        
+        # Từ điển các phân phối thống kê được hỗ trợ
         self.supported_distributions = {
-            'gumbel': stats.gumbel_r,
-            'log_normal': stats.lognorm,
-            'weibull': stats.weibull_min,
-            'pearson3': None,  # Custom implementation needed
-            'generalized_extreme_value': stats.genextreme
+            'gumbel': stats.gumbel_r,              # Phân phối Gumbel (phổ biến nhất cho lũ)
+            'log_normal': stats.lognorm,           # Phân phối Log-Normal  
+            'weibull': stats.weibull_min,          # Phân phối Weibull
+            'pearson3': None,                      # Phân phối Pearson Type III (cần implementation riêng)
+            'generalized_extreme_value': stats.genextreme  # Phân phối GEV
         }
         
-        # Professional standards thresholds
-        self.min_years_preliminary = 10
-        self.min_years_reliable = 30
-        self.min_years_design = 50
+        # Ngưỡng tiêu chuẩn chuyên nghiệp về số năm dữ liệu tối thiểu
+        self.min_years_preliminary = 10   # Phân tích sơ bộ: ít nhất 10 năm
+        self.min_years_reliable = 30      # Phân tích tin cậy: ít nhất 30 năm  
+        self.min_years_design = 50        # Thiết kế công trình: ít nhất 50 năm
         
-        # Quality control parameters
-        self.outlier_threshold = 3.0  # Standard deviations
-        self.trend_significance = 0.05  # p-value for trend testing
+        # Tham số kiểm soát chất lượng dữ liệu
+        self.outlier_threshold = 3.0      # Ngưỡng phát hiện ngoại lai (số lần độ lệch chuẩn)
+        self.trend_significance = 0.05    # Mức ý nghĩa cho kiểm định xu hướng (p-value)
         self.homogeneity_significance = 0.05
     
     async def comprehensive_frequency_analysis(self, data: pd.DataFrame, 

@@ -271,13 +271,11 @@ Hệ thống được **đảm bảo chất lượng** cho các ứng dụng:
 ## 📞 LIÊN HỆ VÀ HỖ TRỢ
 
 **Technical Contact:**  
-- Email: technical@hydroanalysis.vn
-- Website: https://hydroanalysis.vn
-- GitHub: https://github.com/hydroanalysis-vietnam
+- Email: trungnampyag@gmail.com
+- Website: https://nguyentrungnam.com
+- GitHub: https://github.com/hydroanalysis-vietnam](https://github.com/Trung-Nam-2512
 
-**Business Contact:**
-- Email: business@hydroanalysis.vn  
-- Phone: +84 XXX XXX XXX
+
 
 **Support Documentation:**
 - User Manual: `/docs/user-manual.pdf`
